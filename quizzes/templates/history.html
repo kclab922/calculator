@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="card mt-4">
+        <div class="card-header">
+            {{ quiz.id }}
+        </div>
+
+        <div class="card-body">
+            {{ quiz.num1 }}
+        </div>
+        <div class="card-body">
+            {{ quiz.op }}
+        </div>
+        <div class="card-body">
+            {{ quiz.num2 }}
+        </div>
+        <div class="card-body">
+            {{ quiz.output }}
+        </div>
+        <div class="card-footer">
+            {{ article.created_at }}
+        </div>
+    </div>
+{% endblock %}

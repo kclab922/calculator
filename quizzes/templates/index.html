@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <table class="table mt-4" >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Quiz</th>
+                <th>Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quiz in quizzes %}
+            <tr>
+                <td>{{quiz.id}}</td>
+                <td>{{quiz.num1}} {{quiz.op}} {{quiz.num2}}</td>
+                <td><a href="{% url 'quizzes:answer' id=quiz.id %}"></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
